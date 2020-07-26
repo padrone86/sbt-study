@@ -63,14 +63,16 @@ libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % 
 // Here's a quick glimpse of what a multi-project build looks like for this
 // build, with only one "subproject" defined, called `root`:
 
-// lazy val root = (project in file(".")).
-//   settings(
-//     inThisBuild(List(
-//       organization := "ch.epfl.scala",
-//       scalaVersion := "2.13.1"
-//     )),
-//     name := "hello-world"
-//   )
+lazy val root = (project in file(".")).
+  settings(
+    inThisBuild(List(
+      organization := "ch.epfl.scala",
+      scalaVersion := "2.13.1"
+    )),
+    name := "hello-world"
+  )
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % Test
 
 // To learn more about multi-project builds, head over to the official sbt
 // documentation at http://www.scala-sbt.org/documentation.html
